@@ -3,7 +3,7 @@ from sqlalchemy.orm import relationship
 from src.infra.database.config import Base
 from .associations import task_tag
 
-class Tag(Base):
+class TagModel(Base):
     __tablename__ = 'tag'
 
     id = Column(Integer, primary_key=True, index=True)

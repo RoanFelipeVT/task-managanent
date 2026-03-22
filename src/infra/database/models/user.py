@@ -2,7 +2,7 @@ from sqlalchemy import Column, Integer, String, LargeBinary
 from sqlalchemy.orm import relationship
 from src.infra.database.config import Base
 
-class User(Base):
+class UserModel(Base):
     __tablename__ = 'user'
 
     id = Column(Integer, primary_key=True, index=True)
