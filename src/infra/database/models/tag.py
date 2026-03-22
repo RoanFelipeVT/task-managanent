@@ -7,8 +7,9 @@ class TagModel(Base):
     __tablename__ = 'tag'
 
     id = Column(Integer, primary_key=True, index=True)
-    name = Column(String)
-    user_id = Column(Integer, ForeignKey('user.id', name='fk_user'))
+    name = Column(String, nullable=False, unique=True)
+    user_id = Column(Integer, ForeignKey('user.id', name='fk_user'), nullable=False)
 
+    #relacionamento
     user = relationship('User', back_populates='tags')
     tasks = relationship('Task', secondary=task_tag, back_populates='tags')
