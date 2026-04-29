@@ -1,4 +1,4 @@
-fastapi[standart]
+fastapi[standard]
 uvicorn
 sqlalchemy
 pydantic
