@@ -1,5 +1,5 @@
 from sqlalchemy import Table, Column, Integer, ForeignKey
-from src.infra.database.connection import Base
+from src.infra.database.base import Base
 
 task_tag = Table(
     'task_tag',

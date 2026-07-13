@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Integer, String, LargeBinary
 from sqlalchemy.orm import relationship
-from src.infra.database.connection import Base
+from src.infra.database.base import Base
 
 class User(Base):
     __tablename__ = 'user'

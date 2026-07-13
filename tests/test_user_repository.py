@@ -1,14 +1,14 @@
-from src.infra.database.repositories.user_repository import UserRepository
+from datetime import date
+from src.infra.database.repositories.UserRepository import UserRepository
 from src.infra.database.models.user import User
 def test_create_user(db_session):
     repo = UserRepository(db_session)
 
     user = User(
         email="test@email.com",
-        username="teste",
+        name="teste",
         password="123",
-        cellphone="123456789",
-        birth_date="2000-01-01"
+        cellphone="123456789"
         )
 
     result = repo.create(user)

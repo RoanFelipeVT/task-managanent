@@ -1,7 +1,7 @@
 from sqlalchemy import Column, Integer, String, ForeignKey, DateTime
 from sqlalchemy.orm import relationship
 from sqlalchemy.sql import func
-from src.infra.database.connection import Base
+from src.infra.database.base import Base
 from .associations import task_tag
 
 class Task(Base):

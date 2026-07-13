@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.orm import relationship
-from src.infra.database.connection import Base
+from src.infra.database.base import Base
 from .associations import task_tag
 
 class Tag(Base):
