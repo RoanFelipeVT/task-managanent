@@ -23,7 +23,7 @@ class Settings(BaseSettings):
         return f"{self.DB_DIALECT}+{self.DB_DRIVER}://{self.DB_USER}:{self.DB_PASSWORD}@{self.DB_HOST}:{self.DB_PORT}/{self.DB_NAME}"
 
     class Config:
-        env_file = os.getenv("ENV_FILE",".env")
+        env_file = ".env"
 
 
 settings = Settings()

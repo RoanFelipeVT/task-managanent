@@ -6,7 +6,7 @@ from alembic.config import Config
 from alembic import command
 
 # Define o arquivo de ambiente antes de importar o settings
-os.environ["ENV_FILE"] = ".env.test"
+
 from src.core.config import settings
 
 # Configuração do Engine de Teste
