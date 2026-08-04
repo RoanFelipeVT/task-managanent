@@ -12,10 +12,13 @@ class Settings(BaseSettings):
     DB_NAME: str
 
     # Variáveis JWT
-
+    """
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 30
     ALGORITHM: str = "HS256"
     JWT_SECRET_KEY: str 
+    """
+
+   
 
     @property
     def DATABASE_URL(self) -> str:

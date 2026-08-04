@@ -2,6 +2,7 @@ from datetime import date
 from src.infra.database.repositories.UserRepository import UserRepository
 from src.infra.database.models.user import User
 def test_create_user(db_session):
+
     repo = UserRepository(db_session)
 
     user = User(
@@ -15,3 +16,5 @@ def test_create_user(db_session):
 
     assert result.id is not None
     assert result.email == "test@email.com"
+    assert result.password != "abc"
+    
