@@ -29,7 +29,7 @@ def setup_database():
     
     command.upgrade(alembic_cfg, "head")
     
-    yield
+
 
 
 @pytest.fixture
@@ -50,3 +50,5 @@ def db_session():
         db.close()
         transaction.rollback() 
         connection.close() 
+
+ 

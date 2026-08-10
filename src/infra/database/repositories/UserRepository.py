@@ -20,7 +20,7 @@ class UserRepository:
         if not user:
             raise ValueError("Usuário não encontrado")
 
-        for key, value in update_data.itens():
+        for key, value in update_data.items():
             if key not in campos_proibidos and hasattr(user, key):
                 setattr(user, key, value)
 
