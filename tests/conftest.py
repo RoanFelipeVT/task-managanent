@@ -1,12 +1,8 @@
-import os
 import pytest
-from sqlalchemy import create_engine, text # Import 'text' adicionado
+from sqlalchemy import create_engine, text
 from sqlalchemy.orm import sessionmaker
 from alembic.config import Config
 from alembic import command
-
-# Define o arquivo de ambiente antes de importar o settings
-os.environ["ENV_FILE"] = ".env.test"
 from src.core.config import settings
 
 # Configuração do Engine de Teste
@@ -33,7 +29,7 @@ def setup_database():
     
     command.upgrade(alembic_cfg, "head")
     
-    yield
+
 
 
 @pytest.fixture
@@ -54,3 +50,5 @@ def db_session():
         db.close()
         transaction.rollback() 
         connection.close() 
+
+ 
