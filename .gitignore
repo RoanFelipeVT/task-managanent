@@ -16,7 +16,11 @@ alembic/**/__pycache__/
 .pytest_cache/
 .coverage
 htmlcov/
+pytest.ini
 
 # VS Code
 .vscode/
 .devcontainer/
+
+
+
